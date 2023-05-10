@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+	<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Flow+Rounded&family=Varela+Round&display=swap" rel="stylesheet">
+
+	<style>
+		body {
+		  font-family: "Varela Round";
+		  text-align: center;
+		  align-content: center;
+		  font-size: 19.45;
+		}
+
+		.secret {
+			font-family: "Flow Rounded";
+			font-size: 19.45px;
+			padding: 0px; margin: 0px;
+		}
+
+		.navbar {
+			font-family: "Varela Round";
+		  	font-size: 19.45;
+			text-align: center;
+			padding: 0px; margin: 0px;
+		}
+
+	</style>
+
+	<title>coding test website</title>
+</head>
+<body>
+	<h1 class="navbar">coding test website</h1>
+	<h1 class="secret">hello. you just found a secret. just things i added to make this website a little more fun. (there are more secrets in this website, keep looking if you want)</h1>
+
+	<h1>Circumference Finder</h1>
+
+	<py-script>
+		from js import document, alert
+
+		def cr_finder():
+			r = js.document.getElementById("cr_input").value;
+			answer = 6.28 * float(r)
+			pyscript.write("cr_result", answer)
+	</py-script>
+
+	<h3>Radius: </h3>
+	<input id="cr_input" type="text" name="cfinder_input">
+	<button id="cr_finder" type="submit" py-click="cr_finder()">Ok</button>
+	<br>
+	<textarea id="cr_result"></textarea>
+
+	<py-script>
+		from js import document, alert
+
+		def cd_finder():
+			d = js.document.getElementById("cd_input").value;
+			answer = 3.14 * float(d)
+			pyscript.write("cd_result", answer)
+	</py-script>
+
+	<h3>Diameter: </h3>
+	<input id="cd_input" type="text" name="cdfinder_input">
+	<button id="cd_finder" type="submit" py-click="cd_finder()">Ok</button>
+	<br>
+	<textarea id="cd_result"></textarea>
+</body>
+</html>
