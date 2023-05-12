@@ -38,10 +38,10 @@
 
 	</style>
 
-	<title>Circumference Finder</title>
+	<title>Calcul8</title>
 </head>
 <body>
-	<h1 class="navbar">Circumference Finder</h1>
+	<h1 class="navbar">Calcul8</h1>
 	<h1 class="secret">hello. you just found a secret. just things i added to make this website a little more fun. (there are more secrets in this website, keep looking if you want)</h1>
 
 	<h1>Circumference Finder</h1>
@@ -75,5 +75,52 @@
 	<button id="cd_finder" type="submit" py-click="cd_finder()">Ok</button>
 	<br>
 	<textarea id="cd_result"></textarea>
+
+
+	<h1>Force</h1>
+
+	<py-script>
+		from js import document, alert
+
+		def force():
+			m = js.document.getElementById("fmass_input").value;
+			a = js.document.getElementById("fa_input").value;
+
+			answer = float(m) * float(a)
+			pyscript.write("force_ans", answer)
+	</py-script>
+
+	<h3>Mass: </h3>
+	<input id="fmass_input" type="text" name="fmass_input">
+	<h3>Acceleration: </h3>
+	<input id="fa_input" type="text" name="fa_input">
+
+	<button id="force" type="submit" py-click="force()">Ok</button>
+	<br>
+	<textarea id="force_ans"></textarea>
+
+
+
+	<h1>Velocity</h1>
+
+	<py-script>
+		from js import document, alert
+
+		def velocity():
+			d = js.document.getElementById("vd_input").value;
+			t = js.document.getElementById("vt_input").value;
+
+			answer = float(d) / float(t)
+			pyscript.write("velocity_ans", answer)
+	</py-script>
+
+	<h3>Distance: </h3>
+	<input id="vd_input" type="text" name="vd_input">
+	<h3>Time: </h3>
+	<input id="vt_input" type="text" name="vt_input">
+
+	<button id="velocity" type="submit" py-click="velocity()">Ok</button>
+	<br>
+	<textarea id="force_ans"></textarea>
 </body>
 </html>
